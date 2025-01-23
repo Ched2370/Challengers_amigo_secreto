@@ -6,7 +6,7 @@
 
 ## Instrucciones
 
-![portada](https://github.com/Ched2370/imagenes/blob/main/portada.PNG)
+![portada](https://github.com/Ched2370/imagenes/blob/main/portada.png)
 
 1. Ingresar el nombre de tus amigo por medio de cuador de texto y luego apriete **_añadir_**
 

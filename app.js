@@ -1,31 +1,41 @@
 // El principal objetivo de este desafío es fortalecer tus habilidades en lógica de programación. Aquí deberás desarrollar la lógica para resolver el problema.
 let amigos = [];
+const reGex = /^[A-ZÁÉÍÓÚÑ][a-záéíóúñ]*([ '-][A-ZÁÉÍÓÚÑ][a-záéíóúñ]*)*$/;
 const listaAmigos = document.querySelector('.name-list');
 
 function agregarAmigo() {
   let amigo = document.getElementById('amigo');
   if (amigo.value) {
-    amigos.push(amigo.value);
-    const nombre = document.createElement('li');
-    nombre.textContent = `${amigo.value}`;
-    listaAmigos.appendChild(nombre);
-    const Toast = Swal.mixin({
-      toast: true,
-      position: 'bottom-end',
-      showConfirmButton: false,
-      timer: 3000,
-      timerProgressBar: true,
-      didOpen: (toast) => {
-        toast.onmouseenter = Swal.stopTimer;
-        toast.onmouseleave = Swal.resumeTimer;
-      },
-    });
-    Toast.fire({
-      icon: 'success',
-      title: `Nuevo amigo agregado`,
-      text: `${amigo.value}`,
-    });
-    amigo.value = '';
+    if (reGex.test(amigo.value)) {
+      amigos.push(amigo.value);
+      const nombre = document.createElement('li');
+      nombre.textContent = `${amigo.value}`;
+      listaAmigos.appendChild(nombre);
+      const Toast = Swal.mixin({
+        toast: true,
+        position: 'bottom-end',
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+          toast.onmouseenter = Swal.stopTimer;
+          toast.onmouseleave = Swal.resumeTimer;
+        },
+      });
+      Toast.fire({
+        icon: 'success',
+        title: `Nuevo amigo agregado`,
+        text: `${amigo.value}`,
+      });
+      amigo.value = '';
+    } else {
+      Swal.fire({
+        icon: 'error',
+        title: '<strong>Oops...</strong>',
+        html: `<strong>${amigo.value}</strong> debe empezar con mayuscula.
+        Tampoco debe poseer numeros o caracteres especiales.`,
+      });
+    }
   } else {
     Swal.fire({
       title: '<strong>Oops...<strong/>',

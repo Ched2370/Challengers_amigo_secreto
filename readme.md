@@ -22,7 +22,7 @@
 
 - Al ingresar el nombre del amigo correctamente, aparecera un mensaje indicando que el amigo fue agregado a la lista exitosamente
 
-![mensaje de advertencia](https://github.com/Ched2370/imagenes/blob/main/portada_04.png)
+![mensaje de advertencia](https://github.com/Ched2370/imagenes/blob/main/portada_04.PNG)
 
 2. Realiza el sorteo apretando el boton **_Sortear amigo_**
 
@@ -34,4 +34,4 @@
 
 - Si caso que vaya todo bien, abra un ganador
 
-![ganador](https://github.com/Ched2370/imagenes/blob/main/portada_06.png)
+![ganador](https://github.com/Ched2370/imagenes/blob/main/portada_06.PNG)

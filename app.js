@@ -13,9 +13,20 @@ function agregarAmigo() {
     console.log(amigos);
     amigo.value = '';
     amigo.focus();
+  } else {
+    Swal.fire({
+      title: '<strong>Oops...<strong/>',
+      text: 'Por favor, ingrese un nombre.',
+      icon: 'warning',
+    });
   }
 }
 
 function sortearAmigo() {
-  alert('Sortear amigo');
+  Swal.fire({
+    title: 'El ganador es: ',
+    text: 'Mario',
+    imageUrl: '/assets/winner.svg',
+    imageHeight: '300',
+  });
 }

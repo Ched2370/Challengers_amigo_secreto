@@ -34,4 +34,4 @@
 
 - Si caso que vaya todo bien, abra un ganador
 
-![mensaje de advertencia](https://github.com/Ched2370/imagenes/blob/main/portada_06.png)
+![ganador](https://github.com/Ched2370/imagenes/blob/main/portada_06.png)

@@ -34,6 +34,8 @@ function agregarAmigo() {
         title: '<strong>Oops...</strong>',
         html: `<strong>${amigo.value}</strong> debe empezar con mayuscula.
         Tampoco debe poseer numeros o caracteres especiales.`,
+        allowOutsideClick: false,
+        allowEscapeKey: false,
       });
     }
   } else {
@@ -41,6 +43,8 @@ function agregarAmigo() {
       title: '<strong>Oops...<strong/>',
       text: 'Por favor, ingrese un nombre.',
       icon: 'warning',
+      allowOutsideClick: false,
+      allowEscapeKey: false,
     });
   }
   amigo.focus();
@@ -55,6 +59,8 @@ function sortearAmigo() {
       html: '<b></b>',
       timer: 3000,
       timerProgressBar: true,
+      allowOutsideClick: false,
+      allowEscapeKey: false,
       didOpen: () => {
         Swal.showLoading();
         const timer = Swal.getPopup().querySelector('b');
@@ -76,11 +82,12 @@ function sortearAmigo() {
         showCancelButton: true,
         confirmButtonText: 'Limpiar',
         cancelButtonText: 'Repetir',
+        allowOutsideClick: false,
+        allowEscapeKey: false,
       }).then((result) => {
         if (result.isConfirmed) {
           amigos = [];
           listaAmigos.innerHTML = '';
-          console.log(amigos);
         }
       });
     });
@@ -90,6 +97,8 @@ function sortearAmigo() {
       text: 'No hay suficientes amigos para realizar el sorteo',
       imageUrl: '/assets/friendless.svg',
       imageHeight: '200',
+      allowOutsideClick: false,
+      allowEscapeKey: false,
     });
   }
 }
